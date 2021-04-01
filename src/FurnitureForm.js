@@ -93,10 +93,19 @@ class FurnitureForm extends Component {
       <Button style={{backgroundColor: '#D9C5A6', color: 'black'}} className="del-btn" type='submit'>Submit</Button>
       <Popup
       className="pop-up"
-      style={{color: 'black'}}
+      style={{color: 'white', height: '100px',
+      'verticalAlign': 'middle',
+      'textAlign': 'center'}}
     trigger={<Button style={{backgroundColor: '#D9C5A6', color: 'black'}} icon='add' />}
     content="To find an image URL, right click on image and choose the *Copy Image Address* option. Then paste it into this form"
     basic
+    position="bottom left"
+    inverted= "true"
+    hideOnScroll="true"
+   
+   
+    
+   
   />
     </Form>
     </div>
