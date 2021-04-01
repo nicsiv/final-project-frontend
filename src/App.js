@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import Login from './Login';
+import background from './background1.jpg';
+
 
 function App() {
+  const [token, setToken] = useState();
+
+  if(!token) {
+    return <Login setToken={setToken}/>
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <BrowserRouter>
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          {/* <Route path="/login">
+            <Login />
+          </Route> */}
+          <Route
+          exact
+          path="/"
+          component={() => (
+            <div style={{ backgroundImage: `url(${background})` }}>
+              <Login />{' '}
+            </div>
+          )}
+        />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

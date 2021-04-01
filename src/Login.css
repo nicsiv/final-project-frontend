@@ -1,0 +1,57 @@
+/* #root {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center;
+    justify-self: center;
+    display: inline-grid; */
+  /* padding: 1rem;
+  margin: 1rem 2rem; */
+  /* left: 50%;
+  top: 50%;
+  margin-left: -25%;
+  position: absolute;
+  margin-top: -25%;
+  } */
+  
+
+  #parent {
+    background-image: url('background1.jpg');
+    align-items: center;
+    width: 100%;
+    text-align: center; 
+}
+
+
+ .Login {
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.form-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;  
+}
+
+.new-form{
+    padding: 20px;
+    height: 25vh;
+    width: 25%;
+}
+
+.form-parent{
+    /* align-items: center;
+    text-align: center; 
+    vertical-align: middle;
+    justify-content: center;
+    flex-direction: column; */
+    height: 100vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+}
